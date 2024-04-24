@@ -1,6 +1,6 @@
 streamlit
 pandas
 numpy
-sklearn
-mlflow
-altair
+pip install scikit-learn
+pip install mlflow
+pip install altair
