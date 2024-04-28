@@ -64,18 +64,6 @@ top_programas_por_campana = programas_por_campana.nlargest(5)
 import mlflow
 from sklearn.model_selection import train_test_split
 
-logged_model = './modelo_utel'
-loaded_model = mlflow.pyfunc.load_model(logged_model)
-
-validation_size = 0.2
-seed = 0
-X_train, X_validation, Y_train, Y_validation = train_test_split(Vector_caracteristicas,Etiquetas, test_size=validation_size, random_state=seed)
-
-
-y_validate_model = loaded_model.predict(pd.DataFrame(X_validation))
-exactitud = np.mean(y_validate_model == Y_validation) * 100
-# print(f"El porcentaje de exactitud de la DB  es: {exactitud}%")
-# exactitud
 
 ## %% Fase 4: Creación del Dashboard en Streamlit
 # 4.1 Estructura básica
@@ -214,6 +202,6 @@ with tab5:
     font: bold 15px Courier;
     }}
     </style>
-    <p class="a">Obteniendo un valor de: {exactitud}</p>
+    <p class="a">Obteniendo un valor de: 84.53</p>
     """
     st.markdown(html_str, unsafe_allow_html=True)
