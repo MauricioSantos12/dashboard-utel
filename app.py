@@ -62,10 +62,7 @@ top_programas_por_campana = programas_por_campana.nlargest(5)
 ## %% FASE 3: MODELADO DE MACHINE LEARNING
 
 import mlflow
-import pandas as pd
 from sklearn.model_selection import train_test_split
-import numpy as np
-
 
 logged_model = './modelo_utel'
 loaded_model = mlflow.pyfunc.load_model(logged_model)
