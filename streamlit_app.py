@@ -61,9 +61,7 @@ top_programas_por_campana = programas_por_campana.nlargest(5)
 
 ## %% FASE 3: MODELADO DE MACHINE LEARNING
 
-import mlflow
 from sklearn.model_selection import train_test_split
-
 
 ## %% Fase 4: Creación del Dashboard en Streamlit
 # 4.1 Estructura básica
