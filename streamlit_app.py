@@ -103,7 +103,7 @@ with tab1:
 with tab2:
     ## Gráfica 1
     plt.figure(figsize=(12, 6))
-    sns.countplot(x="Campaña", hue="Etapa", data=df, palette="Set2")
+    sns.countplot(x="Campaña", hue="Etapa", legend=False, data=df, palette="Set2")
     plt.xticks(rotation=45, ha='right')
     plt.title('Campaña por Etapa')
     plt.ylabel('Cantidad')
@@ -112,7 +112,7 @@ with tab2:
 
     ## Gráfica 2
     plt.figure(figsize=(12, 6))
-    sns.countplot(x="Nivel de programa", hue="Etapa", data=df, palette="Set2")
+    sns.countplot(x="Nivel de programa", hue="Etapa", legend=False, data=df, palette="Set2")
     plt.xticks(rotation=45, ha='right')
     plt.title('Nivel de programa por Etapa')
     plt.xlabel('Nivel de programa')
@@ -122,7 +122,7 @@ with tab2:
 
     ##Gráfica 3
     plt.figure(figsize=(12, 6))
-    sns.countplot(x="Programa de interés", hue="Etapa", data=df, palette="Set2")
+    sns.countplot(x="Programa de interés", hue="Etapa", legend=False, data=df, palette="Set2")
     plt.xticks(rotation=45, ha='right')
     plt.title('Programa de interés por Etapa')
     plt.xlabel('Programa de interés')
@@ -173,7 +173,7 @@ with tab3:
     st.pyplot(plt)
 
 with tab4:
-    sns.countplot(x="Campaña", hue="Nivel de programa", data=df, palette="Set2")
+    sns.countplot(x="Campaña", hue="Nivel de programa", legend=False, data=df, palette="Set2")
     plt.title('Campaña por Nivel de programa')
     plt.xlabel('Campaña')
     plt.ylabel('Cantidad')
